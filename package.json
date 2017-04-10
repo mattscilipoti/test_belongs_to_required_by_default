@@ -1,0 +1,5 @@
+{
+  "name": "test_belongs_to_required_by_default",
+  "private": true,
+  "dependencies": {}
+}
