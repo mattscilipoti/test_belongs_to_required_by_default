@@ -1,24 +1,13 @@
-# README
+# Test project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Used to identify why some gems are disabling `AR#belongs_to_required_by_default`
 
-Things you may want to cover:
+- https://github.com/gonzalo-bulnes/simple_token_authentication/issues/297
+- https://github.com/swanandp/acts_as_list/issues/268
 
-* Ruby version
 
-* System dependencies
+## Tests
 
-* Configuration
+Run via `$ rake test`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Focusing on single test: `integration/belongs_to_required_by_default`
