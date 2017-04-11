@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ListHasManyListItemsTestCase < Minitest::Test
+class ListHasManyListItemsTestCase < ActiveSupport::TestCase
   def test_list_item_is_not_valid_without_list
     list_item = ListItem.new
 
