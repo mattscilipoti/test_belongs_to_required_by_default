@@ -5,6 +5,6 @@ class ListHasManyListItemsTestCase < Minitest::Test
     list_item = ListItem.new
 
     assert !list_item.valid?
-    assert list_item.errors[:list].include?('must exist')
+    assert_includes list_item.errors[:list], 'must exist'
   end
 end
