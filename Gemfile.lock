@@ -8,6 +8,15 @@ GIT
       sprockets (~> 4.x)
       sprockets-rails (< 4.0)
 
+GIT
+  remote: https://github.com/thoughtbot/appraisal.git
+  revision: 979bd941dca752639e45a29d1bf42960a01dba3e
+  specs:
+    appraisal (2.1.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,8 +57,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts_as_list (0.9.5)
-      activerecord (>= 3.0)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
@@ -177,7 +184,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_list
+  appraisal!
   byebug
   capybara (~> 2.13.0)
   coffee-rails (~> 4.2)
