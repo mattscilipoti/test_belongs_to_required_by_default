@@ -2,26 +2,70 @@
 
 source "https://rubygems.org"
 
+gem "bundler", "~> 1.13"
 gem "rails", "5.1.0.rc1"
 gem "sqlite3"
-gem "puma", "~> 3.7"
-gem "sass-rails", git: "https://github.com/rails/sass-rails.git"
-gem "uglifier", ">= 1.3.0"
-gem "coffee-rails", "~> 4.2"
-gem "turbolinks", "~> 5"
-gem "jbuilder", "~> 2.5"
+gem "puma", "~> 3.0"
 gem "appraisal", git: "https://github.com/thoughtbot/appraisal.git"
+gem "acts_as_list", "> 0.9.0"
+gem "airbrake"
+gem "awesome_print", require: false
+gem "bh", "~> 1.3"
+gem "bootstrap-sass"
+gem "coffee-rails", "~> 4.2"
+gem "devise"
+gem "haml-rails"
+gem "figaro"
+gem "jbuilder", "~> 2.5"
+gem "jquery-rails"
+gem "jquery-ui-rails"
+gem "order_as_specified"
+gem "rack-heartbeat"
+gem "redcarpet", require: false
+gem "sass-rails", "~> 5.0"
+gem "simple_form"
+gem "simple_token_authentication", "~> 1.0"
+gem "streamio-ffmpeg", require: false
+gem "turbolinks", "~> 5"
+gem "uglifier", ">= 1.3.0"
+gem "whenever", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "capybara", "~> 2.13.0"
   gem "selenium-webdriver"
 end
 
+group :ci, :development, :test, :staging do
+  gem "bullet"
+  gem "capybara", "~> 2.4"
+  gem "database_cleaner", require: false
+  gem "factory_girl_rails"
+  gem "phantomjs", require: false
+  gem "poltergeist", require: false
+  gem "pry-byebug", platform: :mri
+  gem "pry-rails", platform: :mri
+  gem "rspec-rails", "~> 3.5"
+  gem "teaspoon-mocha"
+  gem "sandi_meter", require: false
+end
+
 group :development do
-  gem "web-console", ">= 3.3.0"
-  gem "listen", ">= 3.0.5", "< 3.2"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "capistrano-figaro"
+  gem "capistrano-rails", "~> 1.1"
+  gem "capistrano-passenger"
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "guard-rspec", require: false
+  gem "guard-teaspoon", require: false
+  gem "haml_lint", require: false
+  gem "listen", "~> 3.0.5"
+  gem "meta_request"
+  gem "rails_db"
+  gem "rails-erd"
+  gem "rubocop", require: false
+  gem "scss_lint", require: false
+  gem "web-console"
+end
+
+source "https://rails-assets.org" do
+  gem "rails-assets-airbrake-js-client"
 end
